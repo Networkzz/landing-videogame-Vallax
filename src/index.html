@@ -3,21 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Videogame</title>
-    <link rel="stylesheet" href="styles/style.sass" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/styles.scss" />
+    <title>Vallax Videogame</title>
   </head>
   <body>
-    <nav>
-
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <a href="/" class="navbar__logo">Vallax</a>
+      <div class="navbar__bars"><i class="fas fa-bars"></i></div>
+      <div class="navbar__menu">
+        <a href="#character" class="navbar__menu--links">Heroes</a>
+        <a href="/" class="navbar__menu--links">Maps</a>
+        <a href="/" class="navbar__menu--links">Audio</a>
+        <a href="/" class="navbar__menu--links">Video</a>
+        <a href="/" class="navbar__menu--links" id="button">BUY</a>
+      </div>
     </nav>
+
+    <!-- Hero Section -->
     <main>
-      <header>
-        <h1>Videojuego</h1>
-      </header>
+      <div class="hero">
+        <div class="hero__container">
+          <div class="hero__container--left">
+            <h1>Demons are coming</h1>
+            <h2>be prepared...</h2>
+            <p>Buy the game and play it right now!</p>
+            <button class="hero__container--btn"><a href="#">BUY</a></button>
+          </div>
+          <div class="hero__container--right">
+            <img
+              src="./assets/Humano.png"
+              alt="hero"
+              class="hero__container--img"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Characters Section -->
+      <div class="character">
+        <h1 id="character">Heroes</h1>
+        <h2>Raethor</h2>
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcset="./assets/Humano.png"
+          />
+          <source media="(min-width: 800px)" srcset="./assets/Humano.png" />
+          <img
+            src="./assets/Humano.png"
+            alt="Human"
+          />
+        </picture>
+        <p>Raethor is a brave hero who lives in Kalathrix a region invaded by demons, he is fighting for the freedom of Kalahtrix.</p>
+        <h2>Vallax</h2>
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcset="./assets/Humano.png"
+          />
+          <source media="(min-width: 800px)" srcset="./assets/Boss.png" />
+          <img
+            src="./assets/Humano.png"
+            alt="Human"
+          />
+        </picture>
+        <p>Vallax is the leader of the demon legion that invaded the region of Kalathrix, he is a high tier demon.</p>
+      </div>
+      <!-- Maps Section -->
+      <div class="map">
+        <h1 id="map">Maps</h1>
+        <h2>Garden</h2>
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcset="./assets/Garden.png"
+          />
+          <source media="(min-width: 800px)" srcset="./assets/Garden.png" />
+          <img
+            src="./assets/Garden.png"
+            alt="Garden"
+          />
+        </picture>
+        <p>Garden description TODO</p>
+        <h2>City</h2>
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcset="./assets/city_map.png"
+          />
+          <source media="(min-width: 800px)" srcset="./assets/city_map.png" />
+          <img
+            src="./assets/city_map.png"
+            alt="City"
+          />
+        </picture>
+        <h2>Boss</h2>
+        <p>City description TODO</p>
+        <picture>
+          <source
+            media="(max-width: 799px)"
+            srcset="./assets/Humano.png"
+          />
+          <source media="(min-width: 800px)" srcset="./assets/boss_map.png" />
+          <img
+            src="./assets/boss_map.png"
+            alt="BossMap"
+          />
+        </picture>
+        <p>City description TODO</p>
+      </div>
     </main>
     <footer>
-      © <span id="dateFooter"></span> Alejandro Martín Pérez. All Rights Reserved.
+      © <span id="dateFooter"></span> Alejandro Martín Pérez. All Rights
+      Reserved.
     </footer>
   </body>
   <script src="./scripts/main.js"></script>
