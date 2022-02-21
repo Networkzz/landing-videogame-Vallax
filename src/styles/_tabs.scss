@@ -1,0 +1,62 @@
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+}
+$tab-label-height: 40px;
+$tab-content-height: 150px;
+.tab, .tab2 {
+  float: left;
+  
+  &__group{
+    @include clearfix;
+    position: relative;
+    height: $tab-label-height + $tab-content-height;
+    width: 500px;
+    margin: 0 auto;
+    
+  }
+  
+  &__label {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: $tab-label-height;
+    cursor: pointer;
+    
+    // Active tab styles
+    background: rgba(17, 1, 1, 0.212);
+  }
+  
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: $tab-content-height;
+    top: $tab-label-height;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 0 auto;
+    background: $light;
+  }
+  
+  &__radio {
+    display: none;
+
+    &:not(:checked) {
+      // Inactive tab styles
+      & ~ .tab__label,& ~ .tab2__label {
+        background: transparent;
+      }
+      & ~ .tab__label:hover,& ~ .tab2__label:hover{
+        background: rgba(17, 1, 1, 0.247);
+      }
+      & ~ .tab__content,& ~ .tab2__content  {
+        display: none;
+      }
+    }
+  }
+}

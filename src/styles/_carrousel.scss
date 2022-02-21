@@ -1,0 +1,60 @@
+.carousel {
+  width: 90%;
+  max-width: 70rem;
+  display: grid;
+  grid: "all" 1fr/1fr;
+  align-items: center;
+  overflow-x: hidden;
+  margin: 0 auto;
+
+  > * {
+      grid-area: all;
+  }
+  &__button {
+      width: max-content;
+      height: max-content;
+      z-index: 5;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      transition: transform 250ms;
+      cursor: pointer;
+      background: transparent;
+      font-size: 3.5rem;
+      &:hover {
+          transform: scale(1.1);
+      }
+
+      &--previous {
+          justify-self: start;
+      }
+
+      &--next {
+          justify-self: end;
+      }
+  }
+  &__image {
+      width: 100%;
+
+      &.hidden {
+          visibility: hidden;
+      }
+  }
+}
+
+@keyframes animateFromLeft{
+  from{transform: translateX(-100%);}
+  to {transform: translateX(0);}
+}
+@keyframes animateFromRight{
+  from{transform: translateX(100%);}
+  to {transform: translateX(0);}
+}
+@keyframes animateToLeft{
+  from{transform: translateX(0);}
+  to {transform: translateX(-100%);}
+}
+@keyframes animateToRight{
+  from{transform: translateX(0);}
+  to {transform: translateX(100%);}
+}
