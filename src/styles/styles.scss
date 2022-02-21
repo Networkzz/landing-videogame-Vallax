@@ -1,13 +1,13 @@
-@import 'navbar';
+@import "navbar";
 :root {
   font-weight: 700;
   font-size: 62.5%; /* 10px */
-} 
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 body {
   background-color: $light;
@@ -99,7 +99,7 @@ body {
 
     &--btn:after {
       position: absolute;
-      content: '';
+      content: "";
       top: 0;
       left: 0;
       width: 0;
@@ -128,28 +128,105 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: $darkRed;
+    margin-bottom: 1rem;
+  }
+  picture{
+    margin: 2rem;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+  }
+  picture:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  /*picture img {
+    width: 50rem;
+    height: 60rem;
+  }*/
 }
-.character h1 {
-  text-align: center;
-  font-size: 4rem;
-  color: $darkRed;
-  margin-bottom: 1rem;
+.map {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: inherit;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
 }
-.character picture, .map picture {
-  margin: 2rem;
-  box-shadow: 5px 5px rgba(0,0,0,.15);
-  transition: all .4s ease;
-  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
-}
-.character picture:hover, .map picture:hover {
-  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-  box-shadow: 10px 10px rgba(0,0,0,.25);
-}
-.character picture img, .map picture img{
-  width: 30rem;
-  height: 40rem;
-}
+
 footer {
   text-align: center;
   padding: 1rem;
+}
+
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+}
+
+$tab-label-height: 40px;
+$tab-content-height: 150px;
+.tab {
+  float: left;
+  
+  &__group {
+    @include clearfix;
+    position: relative;
+    height: $tab-label-height + $tab-content-height;
+    width: 500px;
+    margin: 0 auto;
+    
+  }
+  
+  &__label {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: $tab-label-height;
+    cursor: pointer;
+    
+    // Active tab styles
+    background: rgba(17, 1, 1, 0.397);
+  }
+  
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: $tab-content-height;
+    top: $tab-label-height;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    overflow-x: auto;
+    margin: 0 auto;
+    background: $light;
+  }
+  
+  &__radio {
+    display: none;
+
+    &:not(:checked) {
+      // Inactive tab styles
+      & ~ .tab__label {
+        background: transparent;
+      }
+      & ~ .tab__label:hover{
+        background: rgba(17, 1, 1, 0.644);;
+      }
+      & ~ .tab__content {
+        display: none;
+      }
+    }
+  }
+  h2 {
+    margin-bottom: 1rem;
+  }
 }

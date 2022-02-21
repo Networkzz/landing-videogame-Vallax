@@ -28,6 +28,7 @@
 
     <!-- Hero Section -->
     <main>
+    </div>
       <div class="hero">
         <div class="hero__container">
           <div class="hero__container--left">
@@ -52,11 +53,11 @@
         <picture>
           <source
             media="(max-width: 799px)"
-            srcset="./assets/Humano.png"
+            srcset="./assets/HumanoMobile.png"
           />
-          <source media="(min-width: 800px)" srcset="./assets/Humano.png" />
+          <source media="(min-width: 800px)" srcset="./assets/HumanoTablet.png" />
           <img
-            src="./assets/Humano.png"
+            src="./assets/HumanoTablet.png"
             alt="Human"
           />
         </picture>
@@ -65,12 +66,12 @@
         <picture>
           <source
             media="(max-width: 799px)"
-            srcset="./assets/Humano.png"
+            srcset="./assets/BossMobile.png"
           />
-          <source media="(min-width: 800px)" srcset="./assets/Boss.png" />
+          <source media="(min-width: 800px)" srcset="./assets/BossTablet.png"/>
           <img
-            src="./assets/Humano.png"
-            alt="Human"
+            src="./assets/Boss.png"
+            alt="Boss"
           />
         </picture>
         <p>Vallax is the leader of the demon legion that invaded the region of Kalathrix, he is a high tier demon.</p>
@@ -82,42 +83,89 @@
         <picture>
           <source
             media="(max-width: 799px)"
-            srcset="./assets/Garden.png"
+            srcset="./assets/Escenario_boss_400px.png"
           />
-          <source media="(min-width: 800px)" srcset="./assets/Garden.png" />
+          <source media="(min-width: 800px)" srcset="./assets/Escenario_boss_800px.png" />
           <img
-            src="./assets/Garden.png"
+            src="./assets/boss_map.png"
             alt="Garden"
           />
         </picture>
-        <p>Garden description TODO</p>
-        <h2>City</h2>
         <picture>
           <source
             media="(max-width: 799px)"
-            srcset="./assets/city_map.png"
+            srcset="./assets/PuebloMobile.png"
           />
-          <source media="(min-width: 800px)" srcset="./assets/city_map.png" />
+          <source media="(min-width: 800px)" srcset="./assets/PuebloTablet.png" />
           <img
             src="./assets/city_map.png"
             alt="City"
           />
         </picture>
-        <h2>Boss</h2>
-        <p>City description TODO</p>
         <picture>
           <source
             media="(max-width: 799px)"
-            srcset="./assets/Humano.png"
+            srcset="./assets/InitMobile.png"
           />
-          <source media="(min-width: 800px)" srcset="./assets/boss_map.png" />
+          <source media="(min-width: 800px)" srcset="./assets/InitTablet.png" />
           <img
-            src="./assets/boss_map.png"
+            src="./assets/Garden.png"
             alt="BossMap"
           />
         </picture>
-        <p>City description TODO</p>
       </div>
+      <!--Audio section-->
+      <div class="tab__group">
+    
+        <div class="tab">
+            <input class="tab__radio" type="radio" id="tab-1" name="tab-group-1" checked>
+            <label class="tab__label" for="tab-1">Audio 1</label>
+            
+            <div class="tab__content">
+              <h2>Vallax quote 1:</h2>
+              <audio controls>
+                <source src="./media/Voz demonio 1.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+              </audio>
+            </div> 
+        </div>
+         
+        <div class="tab">
+            <input class="tab__radio" type="radio" id="tab-2" name="tab-group-1">
+            <label class="tab__label" for="tab-2">Audio 2</label>
+            
+            <div class="tab__content">
+              <h2>Vallax quote 1:</h2>
+              <audio controls>
+                <source src="./media/Voz demonio 2.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+              </audio>
+            </div> 
+        </div>
+        <div class="tab">
+            <input class="tab__radio" type="radio" id="tab-3" name="tab-group-1">
+            <label class="tab__label" for="tab-3">Audio 4</label>
+            
+            <div class="tab__content">
+              <h2>Raethor quote 2:</h2>
+              <audio controls>
+                <source src="./media/Voz humano 2.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </div> 
+
+            <div class="tab">
+              <input class="tab__radio" type="radio" id="tab-4" name="tab-group-1">
+              <label class="tab__label" for="tab-4">Audio 3</label>
+              
+              <div class="tab__content">
+                <h2>Raethor quote 1:</h2>
+                <audio controls>
+                  <source src="./media/Voz humano 1.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div> 
+          </div>
+        </div>
     </main>
     <footer>
       © <span id="dateFooter"></span> Alejandro Martín Pérez. All Rights
