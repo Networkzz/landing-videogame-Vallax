@@ -138,11 +138,21 @@ body {
 #boss {
   margin-top: 0.5rem;
 }
-#map{
+#map, #trailer{
   text-align: center;
-  margin: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+#trailer {
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+.trailer {
+  @extend %align-center;
+  justify-content: center;
 }
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 3rem;
 }
