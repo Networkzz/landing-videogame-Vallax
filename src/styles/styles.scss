@@ -145,7 +145,7 @@ body {
 .trailer {
   @extend %align-center;
   justify-content: center;
-  height: 80vh;
+  height: 90vh;
   flex-direction: column;
 }
 /*Arrow connector between sections*/
@@ -177,4 +177,8 @@ body {
 footer {
   text-align: center;
   padding: 3rem;
+}
+video {
+  max-width: 100%;
+  height: auto;
 }
