@@ -1,154 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styles/styles.scss" />
-    <title>Vallax Videogame</title>
-  </head>
-  <body>
-    <!-- Navbar Section -->
-    <nav class="navbar">
-      <a href="/" class="navbar__logo"><img src="./assets/Imagotipo.png" class="navbar__logo"alt="logo"></img></a>
-      <div class="navbar__bars"><i class="fas fa-bars"></i></div>
-      <div class="navbar__menu">
-        <a href="#bump" class="navbar__menu--links">Boss</a>
-        <a href="#bump2" class="navbar__menu--links">Heroe</a>
-        <a href="#map" class="navbar__menu--links">Maps</a>
-        <a href="#trailer" class="navbar__menu--links">Trailer</a>
-        <a href="/" class="navbar__menu--links" id="button">BUY</a>
-      </div>
-    </nav>
-    <!-- Hero Section -->
-    <main>
-      <div class="hero">
-        <div class="hero__container">
-          <div class="hero__container--left">
-            <h1>Demons are coming</h1>
-            <h2>be prepared...</h2>
-            <p>Buy the game and play it right now!</p>
-            <button class="hero__container--btn"><a href="#">BUY</a></button>
-          </div>
-          <div class="hero__container--right">
-            <img
-              src="./assets/Humano.png"
-              alt="hero"
-              class="hero__container--img"
-            />
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./styles/styles.scss" />
+  <title>Vallax Videogame</title>
+</head>
+
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <a id="home" href="/" class="navbar__logo"><img src="./assets/Imagotipo.png" class="navbar__logo"
+        alt="logo"></img></a>
+    <div class="navbar__bars"><i class="fas fa-bars"></i></div>
+    <div class="navbar__menu">
+      <a href="#bump" class="navbar__menu--links">Boss</a>
+      <a href="#bump2" class="navbar__menu--links">Heroe</a>
+      <a href="#map" class="navbar__menu--links">Maps</a>
+      <a href="#trailer" class="navbar__menu--links">Trailer</a>
+      <a href="/" class="navbar__menu--links" id="button">BUY</a>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <main>
+    <div class="hero">
+      <div class="hero__container">
+        <div class="hero__container--left">
+          <h1>Demons are coming</h1>
+          <h2>be prepared...</h2>
+          <p>Buy the game and play it right now!</p>
+          <button class="hero__container--btn"><a href="#">BUY</a></button>
+        </div>
+        <div class="hero__container--right">
+          <img src="./assets/Humano.png" alt="hero" class="hero__container--img" />
         </div>
       </div>
-      <!-- Characters Section -->
-      <div id="bump" class="hero">
-        <div class="hero__container">
-          <picture>
-            <source
-              media="(max-width: 799px)"
-              srcset="./assets/BossMobile.png"
-            />
-            <source media="(min-width: 800px)" srcset="./assets/BossMobile.png"/>
-            <img
-              src="./assets/Boss.png"
-              alt="Boss"
-            />
-          </picture>
-          <div class="hero__container--left">
-            <div class="tab__group">
-              <div class="tab">
-                  <input class="tab__radio" type="radio" id="tab-1" name="tab-group-1" checked>
-                  <label class="tab__label" for="tab-1">Info</label>
-                  
-                  <div class="tab__content">
-                    <h2 id="boss">Vallax</h2>
-                    <p>Vallax is the leader of the demon legion that invaded the region of Kalathrix, he is one of the strongest demons.</p>
-                  </div> 
+    </div>
+    <a class="arrow" href="#bump">&#8595;</a>
+    <!-- Characters Section -->
+    <div id="bump" class="hero">
+      <div id="background2" class="hero__container">
+        <picture>
+          <source media="(max-width: 799px)" srcset="./assets/BossMobile.png" />
+          <source media="(min-width: 800px)" srcset="./assets/BossMobile.png" />
+          <img src="./assets/Boss.png" alt="Boss" />
+        </picture>
+        <div class="hero__container--left">
+          <div class="tab__group">
+            <div class="tab">
+              <input class="tab__radio" type="radio" id="tab-1" name="tab-group-1" checked>
+              <label class="tab__label" for="tab-1">Info</label>
+
+              <div id="background2" class="tab__content">
+                <h2 id="boss">Vallax</h2>
+                <p>Vallax is the leader of the demon legion that invaded the region of Kalathrix, he is one of the
+                  strongest demons.</p>
               </div>
-              <div class="tab">
-                  <input class="tab__radio" type="radio" id="tab-2" name="tab-group-1">
-                  <label class="tab__label" for="tab-2">Quote 1</label>
-                  
-                  <div class="tab__content">
-                    <h2 id="heroe">Vallax quote 1:</h2>
-                    <audio controls>
-                      <source src="./media/Voz demonio 2.mp3" type="audio/mp3">
-                      Your browser does not support the audio tag.
-                    </audio>
-                  </div> 
-              </div>
-              <div class="tab">
-                  <input class="tab__radio" type="radio" id="tab-3" name="tab-group-1">
-                  <label class="tab__label" for="tab-3">Quote 2</label>
-                  
-                  <div class="tab__content">
-                    <h2>Vallax quote 2:</h2>
-                    <audio controls>
-                      <source src="./media/Voz demonio 1.mp3" type="audio/mp3">
-                      Your browser does not support the audio tag.
-                  </div> 
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-      <div class="hero">
-        <div id="bump2" class="hero__container">
-          <picture>
-            <source
-              media="(max-width: 799px)"
-              srcset="./assets/HumanoMobile.png"
-            />
-            <source media="(min-width: 800px)" srcset="./assets/HumanoMobile.png"/>
-            <img
-              src="./assets/Humano.png"
-              alt="Boss"
-            />
-          </picture>
-          <div class="hero__container--left">
-            <div class="tab2__group">
-              <div class="tab2">
-                  <input class="tab2__radio" type="radio" id="tab2-1" name="tab2-group-1" checked>
-                  <label class="tab2__label" for="tab2-1">Info</label>
-                  
-                  <div class="tab2__content">
-                    <h2 id="heroe" class="human__title">Raethor</h2>
-                    <p>Raethor is a brave hero who lives in Kalathrix a region invaded by demons, he is fighting for the freedom of Kalahtrix.</p>
-                  </div> 
-              </div>
-            <div class="tab2">
-                <input class="tab2__radio" type="radio" id="tab2-2" name="tab2-group-1">
-                <label class="tab2__label" for="tab2-2">Quote 1</label>
-                
-                <div class="tab2__content">
-                  <h2 class="human__title">Raethor quote 1:</h2>
-                  <audio controls>
-                    <source src="./media/Voz humano 1.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                  </audio>
-                </div> 
             </div>
-            <div class="tab2">
-                <input class="tab2__radio" type="radio" id="tab2-3" name="tab2-group-1">
-                <label class="tab2__label" for="tab2-3">Quote 2</label>
-                
-                <div class="tab2__content">
-                  <h2 class="human__title">Raethor quote 2:</h2>
-                  <audio controls>
-                    <source src="./media/Voz humano 2.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                </div> 
+            <div class="tab">
+              <input class="tab__radio" type="radio" id="tab-2" name="tab-group-1">
+              <label class="tab__label" for="tab-2">Quote 1</label>
+
+              <div class="tab__content">
+                <h2 id="heroe">Vallax quote 1:</h2>
+                <audio controls>
+                  <source src="./media/Voz demonio 2.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+            </div>
+            <div class="tab">
+              <input class="tab__radio" type="radio" id="tab-3" name="tab-group-1">
+              <label class="tab__label" for="tab-3">Quote 2</label>
+
+              <div class="tab__content">
+                <h2>Vallax quote 2:</h2>
+                <audio controls>
+                  <source src="./media/Voz demonio 1.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
               </div>
             </div>
           </div>
         </div>
-        <!-- Maps Section-->
-        <h1 id="map">Maps</h1>
-        <div class="carousel">
+      </div>
+      <a class="arrow" href="#bump2">&#8595;</a>
+    </div>
+    <div class="hero">
+      <div id="bump2" class="hero__container">
+        <picture>
+          <source media="(max-width: 799px)" srcset="./assets/HumanoMobile.png" />
+          <source media="(min-width: 800px)" srcset="./assets/HumanoMobile.png" />
+          <img src="./assets/Humano.png" alt="Boss" />
+        </picture>
+        <div class="hero__container--left">
+          <div class="tab2__group">
+            <div class="tab2">
+              <input class="tab2__radio" type="radio" id="tab2-1" name="tab2-group-1" checked>
+              <label class="tab2__label" for="tab2-1">Info</label>
+
+              <div class="tab2__content">
+                <h2 id="heroe" class="human__title">Raethor</h2>
+                <p>Raethor is a brave hero who lives in Kalathrix a region invaded by demons, he is fighting for the
+                  freedom of Kalahtrix.</p>
+              </div>
+            </div>
+            <div class="tab2">
+              <input class="tab2__radio" type="radio" id="tab2-2" name="tab2-group-1">
+              <label class="tab2__label" for="tab2-2">Quote 1</label>
+
+              <div class="tab2__content">
+                <h2 class="human__title">Raethor quote 1:</h2>
+                <audio controls>
+                  <source src="./media/Voz humano 1.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+            </div>
+            <div class="tab2">
+              <input class="tab2__radio" type="radio" id="tab2-3" name="tab2-group-1">
+              <label class="tab2__label" for="tab2-3">Quote 2</label>
+
+              <div class="tab2__content">
+                <h2 class="human__title">Raethor quote 2:</h2>
+                <audio controls>
+                  <source src="./media/Voz humano 2.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="arrow" href="#map">&#8595;</a>
+    <!-- Maps Section-->
+    <div id="background2" class="hero">
+      <div id="map" class="carousel">
         <button class="carousel__button carousel__button--previous" data-direction="previous">
           &#8617;
         </button>
@@ -159,18 +148,20 @@
         <img class="carousel__image hidden" src="./assets/city_map.png" alt="city">
         <img class="carousel__image hidden" src="./assets/boss_map.png" alt="boss">
       </div>
-      <h1 id="trailer">Trailer</h1>
-      <div class="trailer">
-          <video width="720" height="400" controls>
-            <source src="./media/Video-videojuego.webm" type="video/webm">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </main>
-    <footer>
-      © <span id="dateFooter"></span> Alejandro Martín Pérez. All Rights Reserved.
-    </footer>
-  </body>
-  <script src="./scripts/main.js"></script>
+      <a class="arrow" href="#trailer">&#8595;</a>
+    </div>
+    <div id="trailer" class="trailer">
+      <video width="720" height="400" controls>
+        <source src="./media/Video-videojuego.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      <a href="#home"></a><button class="hero__container--btn">BUY</button></a>
+    </div>
+
+  </main>
+  <footer>
+    © <span id="dateFooter"></span> Alejandro Martín Pérez. All Rights Reserved.
+  </footer>
+</body>
+<script src="./scripts/main.js"></script>
 </html>
