@@ -1,13 +1,16 @@
 .carousel {
-  width: 90%;
-  max-width: 70rem;
+  width: 70%;
   display: grid;
   grid: "all" 1fr/1fr;
   align-items: center;
   overflow-x: hidden;
   margin: 0 auto;
-  height: 80vh;
-
+  height: 120vh;
+  @mixin mobile {
+    @media screen and (max-width: 280px) {
+      width: 100%;
+    }
+  }
   > * {
       grid-area: all;
   }
