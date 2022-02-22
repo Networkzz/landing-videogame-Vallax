@@ -11,6 +11,9 @@
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: $light;
   font-size: 1.6rem;
@@ -25,13 +28,12 @@ body {
     align-items: center;
     justify-items: center;
     margin: 0 auto;
-    height: 80vh;
+    height: 90vh;
     z-index: 1;
     width: 100%;
     max-width: 1200px;
     padding-right: 24px;
     padding-left: 24px;
-
     @include tablet {
       grid-template-columns: 1fr;
       height: 100%;
