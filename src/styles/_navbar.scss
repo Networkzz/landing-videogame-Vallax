@@ -16,9 +16,12 @@
   position: relative;
 
   &__logo {
-    height: 10rem;
-    width: 11rem;
-    object-fit: cover;
+    color: $dark;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 4rem;
+    margin-left: 24px;
+    @extend %align-center;
   }
 
   &__bars {
